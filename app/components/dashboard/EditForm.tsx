@@ -28,7 +28,7 @@ import { UploadDropzone } from "@/app/lib/uplaodthing";
 import { categories } from "@/app/lib/categories";
 import { useState } from "react";
 import { useFormState } from "react-dom";
-import { createProduct, editProduct } from "@/app/actions";
+import {  editProduct } from "@/app/actions";
 import { useForm } from "@conform-to/react";
 import { parseWithZod } from "@conform-to/zod";
 import { productSchema } from "@/app/lib/zodSchemas";
@@ -116,7 +116,7 @@ export function EditForm({ data }: iAppProps) {
                 name={fields.price.name}
                 defaultValue={data.price}
                 type="number"
-                placeholder="$55"
+                placeholder="₹55"
               />
               <p className="text-red-500">{fields.price.errors}</p>
             </div>
